@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Blogin.</title>
+</head>
+
+<body>
+
+    <section class="screen" onclick="toggleMenu()"></section>
+
+    <header class="flex justify-center">
+        <section class="container flex space-between align-center">
+            <h1 class="logo">Blogin<span>.</span></h1>
+            <ul class="main-nav clean-list flex">
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="hamburger" onclick="openMenu()" class="menu-btn">☰</button>
+        </section>
+    </header>
+    <section class="join-modal flex column">
+        <h2>To learn more, please join our community</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, repellat. Laboriosam repellendus facilis, minima dolorum voluptatum recusandae. Eveniet repudiandae id magnam maiores molestias distinctio et aliquid tenetur aperiam?</p>
+        <input type="email" placeholder="E-mail address"><br>
+        <button class="join-modal-btn" onclick="closeJoinModal()">Close</button>
+
+    </section>
+    <main class="flex justify-center">
+        <div class="main-content container flex column">
+            <section class="post flex">
+                <img class="post-img" src="/images/004.jpg">
+                <div class="post-content flex">
+                    <h2 class="post-header">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <div class="post-text flex column">
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commo
+                            doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur...
+                        </p>
+                    </div>
+                    <button class="continue-read-btn" onclick="openJoinModal()">Continue Reading</button>
+                </div>
+            </section>
+            <section class="post flex">
+                <img class="post-img" src="/images/005.jpg">
+                <div class="post-content flex">
+                    <h2 class="post-header">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <div class="post-text flex column">
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commo
+                            doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur...
+                        </p>
+                    </div>
+                    <button class="continue-read-btn" onclick="openJoinModal()">Continue Reading</button>
+                </div>
+            </section>
+            <section class="post flex">
+                <img class="post-img" src="/images/006.jpg">
+                <div class="post-content flex">
+                    <h2 class="post-header">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <div class="post-text">
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commo
+                            doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur...
+                        </p>
+                    </div>
+                    <button class="continue-read-btn" onclick="openJoinModal()">Continue Reading</button>
+                </div>
+            </section>
+            <div class="posts-nav container flex space-between align-center">
+                <a class="nav-prev">← previous</a>
+                <a class="nav-next">next →</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="main-footer flex column align-center space-between">
+        <h1 class="logo">Blogin<span>.</span></h1>
+        <small>&copy; 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</small>
+        <article class="footer-links flex">
+            <div class="social facebook"><a href="https://www.facebook.com/"><img src="/images/social_facebook.png"
+                        alt=""></a>
+            </div>
+            <div class="social twitter"><a href="https://twitter.com/explore"><img src="/images/social_tweeter.png"
+                        alt=""></a>
+            </div>
+            <div class="social be"><a href="https://www.behance.net/"><img src="/images/social_be.png" alt=""></a>
+            </div>
+            <div class="social dribble"><a href="https://dribbble.com/"><img src="/images/social_dribble.png"
+                        alt=""></a>
+            </div>
+        </article>
+
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open')
+        }
+        
+        function openMenu() {
+            var navMenu = document.querySelector('.main-nav');
+            var hamburger = document.querySelector('.hamburger');
+            if(navMenu.style.display === 'none') {
+                navMenu.style.display = 'block'
+                hamburger.innerText = 'X';
+            } else {
+               navMenu.style.display = 'none';
+               hamburger.innerText = '☰';
+            }
+        }
+
+        function openJoinModal() {
+            document.querySelector('.join-modal').style. display = 'block';
+        }
+
+        function closeJoinModal() {
+            document.querySelector('.join-modal').style. display = 'none'; 
+        }
+    </script>
+
+</body>
+
+</html>
